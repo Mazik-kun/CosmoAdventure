@@ -154,7 +154,6 @@ profileData.photos.forEach(photo => {
     const img = document.createElement("img");
     img.src = photo.src;
     img.alt = photo.caption;
-    img.style.width = "100%";
 
     const caption = document.createElement("p");
     caption.innerText = photo.caption;

@@ -19,6 +19,7 @@
 }
 body {
     display: flex;
+    overflow: hidden;
     margin: 0;
     font-family: "Itim", "FontRusMain";
     font-size:clamp(1rem, calc(var(--fontsize-)*0.8),1.5rem);
@@ -26,10 +27,8 @@ body {
 
 .sidebar {
     width: 25vw;
-    height: 100vh; 
-    position: fixed;
+    height: 100vh;
     background-color: #f0f0f0;
-    padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -44,11 +43,6 @@ body {
     border-radius: 50%;
 }
 
-.titles {
-    margin: 20px 0;
-    
-}
-
 .achievements {
     display: flex;
     flex-wrap: wrap;
@@ -56,11 +50,10 @@ body {
 }
 
 .achievement {
-    width: 80%;
-    margin: 5px;
-    padding: 10px;
+    width: 45%;
+    margin: 2px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 7px;
     opacity: 0.5; 
     padding: 1.5vh calc(var(--fontsize-)*3) 1.5vh 0.5vw ;
     text-wrap: wrap;
@@ -92,8 +85,49 @@ body {
 
 .stats {
     width: 15vw;
-    padding: 20px;
     background-color: #f0f0f0;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     height: auto;
+}
+@media(orientation:portrait){
+    body{
+        flex-direction: column;
+    }
+    .sidebar{
+        width: 100vw;
+        height: 30vh;
+    }
+    .achievement{
+        width: 20%;
+    }
+    
+    .main-content{
+        margin-left:0;
+        width: 100vw;
+        height: 60vh;
+        overflow-y: none;
+        overflow-x: auto;
+        scroll-snap-type: x proximity;
+    }
+    .photo{
+        width: 100vw;
+        height: 60vh;
+    }
+    img{
+        max-width: 100vw;
+        max-height: 55vh;
+    }
+    .photo-gallery{
+        flex-direction: row;
+        font-size:clamp(0.8rem, calc(var(--fontsize-)*0.6),1.2rem);
+    }
+    .avatar{
+        float: left;
+    }
+    .titles{
+        float:left;
+    }
+    .stats{
+        width: 100vw;
+    }
 }
