@@ -21,7 +21,7 @@ body {
     display: flex;
     margin: 0;
     font-family: "Itim", "FontRusMain";
-    font-size:clamp(1rem, calc(var(--fontsize-)*0.8),1.5rem)
+    font-size:clamp(1rem, calc(var(--fontsize-)*0.8),1.5rem);
 }
 
 .sidebar {
@@ -52,11 +52,11 @@ body {
 .achievements {
     display: flex;
     flex-wrap: wrap;
-    
+    word-break: break-all;
 }
 
 .achievement {
-    width: 45%;
+    width: 90%;
     margin: 5px;
     padding: 10px;
     border: 1px solid #ccc;
