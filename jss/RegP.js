@@ -21,7 +21,7 @@ function saveName() {
     start.style.display = 'block'
 }
 function Redirect(){
-    window.location.assign("./mainp.html");
+    window.location.assign("./Htmls/mainp.html");
 }
 function chooselang(){
     const status = this.dataset.state
