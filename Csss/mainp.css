@@ -63,7 +63,7 @@ video{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    font-size:calc(var(--fontsize--) * 1.8);
+    font-size:clamp(1rem,calc(var(--fontsize--) * 1.8),1.5rem);
 
 }
 .icon{
@@ -104,7 +104,7 @@ video{
     position: relative;
     scroll-snap-align: center;
     color:white;
-    font-size: clamp(1rem,calc(var(--fontsize--) *0.7), 2rem);
+    font-size: clamp(1rem,calc(var(--fontsize--) *0.7), 1.5rem);
     background-image: url(../Images/TextBox.png);
     background-repeat: no-repeat;
     background-position: contain;
@@ -122,7 +122,7 @@ video{
     padding: 0;
 }
 .questions p{
-    font-size: clamp(1rem,calc(var(--fontsize--) *0.7), 2rem);
+    font-size: clamp(1rem,calc(var(--fontsize--) *0.7), 1.5rem);
     background-image: url(../Images/revTextBox.png);
     padding: 3vh;
     background-size: 100% 100%;
@@ -206,7 +206,6 @@ img{
     body{
         flex-direction: column;
         height: 100vh;
-        background-color: white;
     }
     .leftside{
         height: 30vh;
