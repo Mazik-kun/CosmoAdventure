@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --fontsize--:calc(1vh + 1vw);
+}
+@font-face {
+    font-family: "ColaFont";
+    src: url(../Fonts/coca_colaregularrus_lat.otf);
+}
+@font-face {
+    font-family: "Itim";
+    src: url(../Fonts/Itim-Regular.ttf);
+}
+@font-face{
+    font-family: "FontRus";
+    src: url(../Fonts/ofont.ru_Serati.ttf);
+}
+@font-face {
+    font-family: "FontRusMain";
+    src: url(../Fonts/ofont.ru_Arbor.ttf);
+}
+html{
+    overflow: hidden;
+}
+body{
+    background-image: url('../Images/back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.titlebox{
+    max-width: 99vw;
+    font-family: "ColaFont";
+    display: flex;
+    color:white;
+    flex-direction: column;
+    text-align: left;
+    position: absolute;
+    left:2vw;
+    top:2vh;
+}
+.titlebox :nth-child(1){
+    font-size:clamp(3.5rem,calc(var(--fontsize--)*2.2),5rem);
+    white-space: nowrap;
+    transition: 1s;
+}
+.titlebox :nth-child(2){
+    font-size:clamp(1.6rem, calc(var(--fontsize--)*1.1),2.5rem);
+    transition: 1s;
+}
+.hand{
+    background-image: url('../Images/hand.png');
+    height: 70vh;
+    background-size: clamp(200px,100%,250px) 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y:4vh;
+    align-self: flex-end;
+    overflow: hidden;
+    position: absolute;
+    padding: 0 50px 0 50px;
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.hand button, input{
+    font-size:clamp(1.5rem, calc(var(--fontsize--)*1.1),1.25rem);
+    font-family: "Itim","FontRusMain";
+    padding: 2vh 2vw 2vh 2vw;
+    width: clamp(200px,20vw,350px);
+    z-index: 3;
+    text-align: center;
+    border:calc(var(--fontsize--) * 0.2) solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 100vw;
+}
+.hand :nth-child(1){
+    display: block;
+}
+.hand :nth-child(2){
+    display: block;
+}
+.hand :nth-child(3){
+    display: none;
+}
+.hand :nth-child(4){
+    display: none;
+}
+.hand :nth-child(5){
+    display: none;
+}
+@keyframes shake {
+    0%{
+        bottom: -2vh;
+    }
+    100%{
+        bottom: -1vh;
+    }
+}
+.titlebox span:hover {
+    color: rgb(242, 0, 255);
+}
+@media (orientation: portrait){
+    .titlebox :nth-child(1){
+        font-size:clamp(2.5rem,calc(var(--fontsize--)*2.2),3rem);
+        font-family: "Itim","FontRusMain";
+    }
+    .titlebox :nth-child(2){
+        font-size:clamp(1rem, calc(var(--fontsize--)*1.1),2rem);
+        font-family: "Itim","FontRusMain";
+    }
+    .hand{
+        height: 60vh;
+    }
+}

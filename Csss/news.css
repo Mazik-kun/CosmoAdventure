@@ -1,0 +1,102 @@
+@font-face {
+    font-family: "ColaFont";
+    src: url(../Fonts/coca_colaregularrus_lat.otf);
+}
+@font-face {
+    font-family: "Itim";
+    src: url(../Fonts/Itim-Regular.ttf);
+}
+@font-face{
+    font-family: "FontRus";
+    src: url(../Fonts/ofont.ru_Serati.ttf);
+}
+@font-face {
+    font-family: "FontRusMain";
+    src: url(../Fonts/ofont.ru_Arbor.ttf);
+}
+:root{
+    --fontsize-:calc(1vw + 1vh);
+}
+body {
+    font-family: "Itim", "FontRusMain";
+    background-color: #f0f0f0;
+    background-image: url(../Images/believe.jpg);
+    background-position: cover;
+    background-size: 50vw 100vh;
+    margin: 0;
+    padding: 20px;
+    font-size:clamp(0.7rem, calc(var(--fontsize-)*0.7),1.4rem)
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.post {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+}
+
+.caption {
+    padding: 10px;
+    font-weight: bold;
+    background: #f9f9f9;
+}
+
+.comments {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.comments h3 {
+    margin: 0 0 10px;
+}
+
+.comment {
+    margin: 5px 0;
+    padding: 5px;
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.comment-form {
+    margin-top: 10px;
+}
+
+.comment-form input {
+    width: calc(100% - 100px);
+    padding: 5px;
+}
+
+.comment-form button {
+    padding: 5px 10px;
+}
+#next{
+    position: fixed;
+    cursor: pointer;
+    background-color: brown;
+    font-family: "Itim", "FontRusMain";
+    font-size:clamp(0.8rem, calc(var(--fontsize-)*1.1),1.5rem);
+    color:wheat;
+    top:3vh;
+    left:3vw;
+    padding: 1vh 1vw 1vh 1vw;
+}

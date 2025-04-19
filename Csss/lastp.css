@@ -1,0 +1,99 @@
+@font-face {
+    font-family: "ColaFont";
+    src: url(../Fonts/coca_colaregularrus_lat.otf);
+}
+@font-face {
+    font-family: "Itim";
+    src: url(../Fonts/Itim-Regular.ttf);
+}
+@font-face{
+    font-family: "FontRus";
+    src: url(../Fonts/ofont.ru_Serati.ttf);
+}
+@font-face {
+    font-family: "FontRusMain";
+    src: url(../Fonts/ofont.ru_Arbor.ttf);
+}
+:root{
+    --fontsize-:calc(1vw + 1vh);
+}
+body {
+    display: flex;
+    margin: 0;
+    font-family: "Itim", "FontRusMain";
+    font-size:clamp(1rem, calc(var(--fontsize-)*0.8),1.5rem)
+}
+
+.sidebar {
+    width: 25vw;
+    height: 100vh; 
+    position: fixed;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+    text-align: center;
+    
+}
+
+.avatar img {
+    width: clamp(50px, 10%,100px);
+    height: clamp(50px, 10%,100px);
+    border-radius: 50%;
+}
+
+.titles {
+    margin: 20px 0;
+    
+}
+
+.achievements {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.achievement {
+    width: 45%;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    opacity: 0.5; 
+    padding: 1.5vh calc(var(--fontsize-)*3) 1.5vh 0.5vw ;
+    text-wrap: wrap;
+}
+
+.achievement.unlocked {
+    opacity: 1; 
+}
+
+.main-content {
+    margin-left: 25vw; 
+    width: 60vw;
+    height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y proximity;
+}
+
+.photo-gallery {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+}
+
+.photo {
+    margin: 10px;
+    scroll-snap-align: center;
+}
+
+.stats {
+    width: 15vw;
+    padding: 20px;
+    background-color: #f0f0f0;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    height: auto;
+}

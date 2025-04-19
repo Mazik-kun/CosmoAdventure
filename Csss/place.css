@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --fontsize-: calc( 1vw + 1vh );
+}
+@font-face {
+    font-family: "ColaFont";
+    src: url(../Fonts/coca_colaregularrus_lat.otf);
+}
+@font-face {
+    font-family: "Itim";
+    src: url(../Fonts/Itim-Regular.ttf);
+}
+@font-face{
+    font-family: "FontRus";
+    src: url(../Fonts/ofont.ru_Serati.ttf);
+}
+@font-face {
+    font-family: "FontRusMain";
+    src: url(../Fonts/ofont.ru_Arbor.ttf);
+}
+.slider {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden; 
+    position: relative;
+    scroll-snap-type: x proximity;
+}
+.slide {
+    font-family: "Itim", "FontRusMain";
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slidetext{
+    white-space: nowrap;
+    background-color: rgba(255, 255, 255, 0.44);
+    border-radius: calc(var(--fontsize-)*1.9);
+    padding: var(--fontsize-);
+    position: absolute;
+    bottom:0px;
+    font-size: clamp(1rem, calc(var(--fontsize-)*1.1), 2.5rem);
+    color:black;
+}
+a{
+    background-color: rgba(0, 255, 183, 0.44);
+    border-radius: calc(var(--fontsize-)*1.9);
+    padding: var(--fontsize-);
+    place-self: center;
+    color:rgb(255, 0, 0);
+    font-size: clamp(1rem, calc(var(--fontsize-)*1.7), 2.5rem);
+    animation-name: toface;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    user-select: none;
+}
+@keyframes toface{
+    0%{
+        transform: translateZ(0px);
+    }
+    100%{
+        transform: translateZ(1px);
+    }
+}
+.slide[data-count="0"] {
+    background-image: url(../Images/place1.jpg);
+}
+.slide[data-count="1"] {
+    background-image: url(../Images/place2.jpg);
+}
+.slide[data-count="2"] {
+    background-image: url(../Images/place3.jpg);
+}
+.slide[data-count="3"] {
+    background-image: url(../Images/place4.jpg);
+}
+.slide[data-count="4"] {
+    background-image: url(../Images/place5.jpg);
+}
+.slide[data-count="5"] {
+    display: flex;
+    background-image: url(../Images/place6.jpg);
+    perspective: 10px;
+    justify-content: center;
+}
+.slide[data-count="5"] .slidetext{
+    left:0px
+}
