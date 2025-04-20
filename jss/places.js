@@ -19,7 +19,7 @@ function putnames(){
 const slider = document.querySelector(".slider");
 let currentIndex = 0;
 
-function handleClick(event) {
+function positionClick(event) {
     const clientX = event.clientX;
 
     if (clientX < window.innerWidth / 2) {
@@ -37,4 +37,4 @@ function handleClick(event) {
     });
 }
 putnames()
-window.addEventListener("click", handleClick);
+window.addEventListener("click", positionClick);
