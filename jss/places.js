@@ -37,4 +37,14 @@ function positionClick(event) {
     });
 }
 putnames()
+
+function isMobile() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+}
+
+if (isMobile()) {
+    console.log("Это мобильное устройство");
+} else {
+    console.log("Это компьютер");
+}
 window.addEventListener("click", positionClick);
