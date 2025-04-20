@@ -43,8 +43,8 @@ function isMobile() {
 }
 
 if (isMobile()) {
-    console.log("Это мобильное устройство");
+    alert("Это мобильное устройство");
 } else {
-    console.log("Это компьютер");
+    alert("Это компьютер");
 }
 window.addEventListener("click", positionClick);
