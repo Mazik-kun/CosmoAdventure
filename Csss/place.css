@@ -51,6 +51,7 @@
     color:black;
 }
 a{
+    z-index:10;
     position:fixed;
     top: var(--fontsize-);
     left:var(--fontsize-);
