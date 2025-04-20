@@ -43,7 +43,6 @@ function isMobile() {
 }
 
 if (isMobile()) {
-    alert("Это мобильное устройство");
     window.addEventListener("touchstart", positionClick);
 
 } else {
