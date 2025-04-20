@@ -51,6 +51,9 @@
     color:black;
 }
 a{
+    position:fixed;
+    top: var(--fontsize-);
+    left:var(--fontsize-);
     background-color: rgba(0, 255, 183, 0.44);
     border-radius: calc(var(--fontsize-)*1.9);
     padding: var(--fontsize-);
