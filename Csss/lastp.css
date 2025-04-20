@@ -42,8 +42,11 @@ body {
     height: clamp(50px, 10%,100px);
     border-radius: 50%;
 }
-
+.titles{
+    margin: 0 0 0 1vw;
+}
 .achievements {
+    margin: 0 0 0 1vw;
     display: flex;
     flex-wrap: wrap;
     word-break: break-all;
@@ -63,8 +66,7 @@ body {
     opacity: 1; 
 }
 
-.main-content {
-    margin-left: 25vw; 
+.main-content { 
     width: 60vw;
     height: 100vh;
     overflow-y: auto;
@@ -79,6 +81,7 @@ body {
 }
 
 .photo {
+    overflow: hidden;
     margin: 10px;
     scroll-snap-align: center;
 }
@@ -92,42 +95,78 @@ body {
 @media(orientation:portrait){
     body{
         flex-direction: column;
+        font-size:clamp(0.8rem, calc(var(--fontsize-)*0.6),1.2rem);
     }
     .sidebar{
         width: 100vw;
         height: 30vh;
     }
+    .achievements{
+        row-gap: 3vh;
+        justify-content: space-between;
+    }
     .achievement{
-        width: 20%;
+        width: 15%;
+        margin: 0;
+        padding: 0.5vh calc(var(--fontsize-)*1.5) 0.5vh 0.5vw ;
     }
     
     .main-content{
-        margin-left:0;
         width: 100vw;
-        height: 60vh;
+        height: fit-content;
         overflow-y: none;
         overflow-x: auto;
-        scroll-snap-type: x proximity;
+        scroll-snap-type: x mandatory;
+        display: flex;
+        flex-direction: column;
+    }
+    .galera{
+        justify-self: center;
+        align-self: center;
     }
     .photo{
         width: 100vw;
-        height: 60vh;
+        height:fit-content;
+        overflow-x: auto;
     }
     img{
+        width: fit-content;
         max-width: 100vw;
-        max-height: 55vh;
+        max-height: 45vh;
     }
     .photo-gallery{
+        display: flex;
         flex-direction: row;
-        font-size:clamp(0.8rem, calc(var(--fontsize-)*0.6),1.2rem);
-    }
-    .avatar{
-        float: left;
+        justify-content: center;
+        gap: 15px;
+        width: fit-content;
     }
     .titles{
-        float:left;
+        justify-self: center;
     }
     .stats{
         width: 100vw;
+        height: 25vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .stats div{
+        height: 3vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .ht{
+        font-weight: 700;
+        padding-bottom: 1vh;
+    }
+    .hfour{
+        position: absolute;
+        font-weight: 700;
+    }
+    .stats div span{
+        position: absolute;
+        right: 25vw;
     }
 }
