@@ -44,7 +44,9 @@ function isMobile() {
 
 if (isMobile()) {
     alert("Это мобильное устройство");
+    window.addEventListener("touchstart", positionClick);
+
 } else {
-    alert("Это компьютер");
+    window.addEventListener("click", positionClick); 
 }
-window.addEventListener("click", positionClick);
+
