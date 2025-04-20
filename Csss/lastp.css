@@ -120,9 +120,9 @@ body {
         justify-content: space-between;
     }
     .achievement{
-        width: 15%;
+        width: 18%;
         margin: 0;
-        padding: 0.5vh calc(var(--fontsize-)*1.5) 0.5vh 0.5vw ;
+        padding: 0.5vh 1.5vw 0.5vh 0.5vw ;
     }
     
     .main-content{
