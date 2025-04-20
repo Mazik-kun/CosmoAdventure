@@ -114,7 +114,7 @@ body {
     }
     .sidebar{
         width: 100vw;
-        height: 30vh;
+        height: fit-content;
     }
     .achievements{
         row-gap: 1vh;
