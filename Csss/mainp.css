@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
+    border-collapse:collapse;
 }
 @font-face {
     font-family: "ColaFont";
@@ -208,26 +209,27 @@ img{
         height: 100vh;
     }
     .leftside{
-        height: 35vh;
+        height: 30vh;
         margin-right: 0;
     }
     video{
         height: 40vh;
     }
     .rightside{
-        height: 65vh;
+        height: 70vh;
         width: 100vw;
         border:5px solid black;
     }
     .top{
         width: 100%;
+        height:fit-content;
         border-bottom:0.2vh solid black;
     }
     .messtext{
         min-width: 80vw;
     }
     .messages{
-        height: 70vh;
+        height: 65vh;
         padding-bottom: 8vh;
     }
     .yours{
