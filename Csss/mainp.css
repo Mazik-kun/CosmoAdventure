@@ -195,7 +195,7 @@ img{
 #skip{
     position: fixed;
     display: block;
-    z-index: 4;
+    z-index: 10;
     color:white;
     background-color: brown;
     padding: 10px 2vw 10px 2vw;
@@ -208,20 +208,20 @@ img{
         height: 100vh;
     }
     .leftside{
-        height: 30vh;
+        height: 35vh;
         margin-right: 0;
     }
     video{
         height: 40vh;
     }
     .rightside{
-        height: 70vh;
+        height: 65vh;
         width: 100vw;
         border:5px solid black;
     }
     .top{
         width: 100%;
-        border-bottom:5px solid black;
+        border-bottom:0.2vh solid black;
     }
     .messtext{
         min-width: 80vw;
