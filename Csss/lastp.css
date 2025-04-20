@@ -131,7 +131,7 @@ body {
         height: fit-content;
         overflow-y: none;
         overflow-x: auto;
-        scroll-snap-type: x mandatory;
+        scroll-snap-type: x proximity;
         display: flex;
         flex-direction: column;
     }
