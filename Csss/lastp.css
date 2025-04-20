@@ -6,7 +6,7 @@
     font-family: "Itim";
     src: url(../Fonts/Itim-Regular.ttf);
 }
-@font-face{
+@font-face {
     font-family: "FontRus";
     src: url(../Fonts/ofont.ru_Serati.ttf);
 }
@@ -14,37 +14,47 @@
     font-family: "FontRusMain";
     src: url(../Fonts/ofont.ru_Arbor.ttf);
 }
-:root{
-    --fontsize-:calc(1vw + 1vh);
+:root {
+    --fontsize-: calc(1vw + 1vh);
+    --background-color: #121212; /* Темный фон */
+    --text-color: #ffffff; /* Светлый текст */
+    --sidebar-background: #1e1e1e; /* Темный фон для боковой панели */
+    --achievement-background: #2a2a2a; /* Темный фон для достижений */
+    --achievement-border: #444; /* Светлый бордер для достижений */
 }
+
 body {
+    background-color: var(--background-color);
+    color: var(--text-color);
     display: flex;
     overflow: hidden;
     margin: 0;
     font-family: "Itim", "FontRusMain";
-    font-size:clamp(1rem, calc(var(--fontsize-)*0.8),1.5rem);
+    font-size: clamp(1rem, calc(var(--fontsize-)*0.8), 1.5rem);
 }
 
 .sidebar {
     width: 25vw;
     height: 100vh;
-    background-color: #f0f0f0;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--sidebar-background);
+    box-shadow: 2px 0 5px rgba(255, 255, 255, 0.1);
 }
 
 .avatar {
     text-align: center;
-    
 }
 
 .avatar img {
-    width: clamp(50px, 10%,100px);
-    height: clamp(50px, 10%,100px);
+    width: clamp(50px, 10%, 100px);
+    height: clamp(50px, 10%, 100px);
     border-radius: 50%;
+    /* filter: invert(1); */
 }
-.titles{
+
+.titles {
     margin: 0 0 0 1vw;
 }
+
 .achievements {
     margin: 0 0 0 1vw;
     display: flex;
@@ -55,10 +65,11 @@ body {
 .achievement {
     width: 45%;
     margin: 2px;
-    border: 1px solid #ccc;
-    border-radius: 7px;
+    background-color: var(--achievement-background);
+    border: 1px solid var(--achievement-border);
+    border-radius: 10px;
     opacity: 0.5; 
-    padding: 1.5vh calc(var(--fontsize-)*3) 1.5vh 0.5vw ;
+    padding: 1.5vh calc(var(--fontsize-)*3) 1.5vh 0.5vw;
     text-wrap: wrap;
 }
 
@@ -88,11 +99,14 @@ body {
 
 .stats {
     width: 15vw;
-    background-color: #f0f0f0;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--sidebar-background);
+    box-shadow: -2px 0 5px rgba(255, 255, 255, 0.1);
     height: auto;
 }
 @media(orientation:portrait){
+    :root{
+        --fontsize-:calc(0.8vw + 0.9vh)
+    }
     body{
         flex-direction: column;
         font-size:clamp(0.8rem, calc(var(--fontsize-)*0.6),1.2rem);
@@ -102,7 +116,7 @@ body {
         height: 30vh;
     }
     .achievements{
-        row-gap: 3vh;
+        row-gap: 1.5vh;
         justify-content: space-between;
     }
     .achievement{
