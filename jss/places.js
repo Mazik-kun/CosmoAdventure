@@ -20,9 +20,15 @@ const slider = document.querySelector(".slider");
 let currentIndex = 0;
 
 function positionClick(event) {
-    const clientX = event.clientX;
-    const startX = event.touches[0]
-    if (clientX < window.innerWidth / 2 || startX < window.innerWidth  / 2) {
+    let startX
+    let clientX
+    if(isMobile()){
+        startX = event.touches[0].clientX
+    }else{
+        clientX = event.clientX;
+    }
+    console.log(startX);
+    if((clientX <= window.innerWidth / 2) || (startX <= window.innerWidth / 2)) {
         if (currentIndex > 0) {
             currentIndex--;
         }
@@ -38,14 +44,16 @@ function positionClick(event) {
 }
 putnames()
 
+
 function isMobile() {
     return /Mobi|Android/i.test(navigator.userAgent);
 }
-
-if (isMobile()) {
+window.onresize = function(){
+    if (isMobile()) {
     window.addEventListener("touchstart", positionClick);
 
 } else {
     window.addEventListener("click", positionClick); 
+}
 }
 
