@@ -474,11 +474,11 @@ messme();
 function changeloc(a){
     if(a == 0){
         vidos.loop = false;
-        vidos.playbackRate = 3.5
+        vidos.playbackRate = 2.25
         vidos.addEventListener("ended",changecostyl)        
     }else if(a == 1){
         vidos.loop = false;
-        vidos.playbackRate = 3.5
+        vidos.playbackRate = 2.25
         vidos.addEventListener("ended",changecostyl)
     }else if(a == 2){
         changecostyl()
@@ -523,7 +523,7 @@ function changecostyl(){
     
 }
 vidos.muted = true;
-vidos.playbackRate = 1.2
+vidos.playbackRate = 1.5
 vidos.loop = true
 vidos.play()
 let sec = 0
