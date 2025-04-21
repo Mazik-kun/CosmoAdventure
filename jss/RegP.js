@@ -19,6 +19,9 @@ function saveName() {
     input.style.display = 'none';
     conf.style.display = "none"
     start.style.display = 'block'
+    if(name == "Semp" || name == "semp") {
+        alert("Fucking slave") 
+    } 
 }
 function Redirect(){
     window.location.assign("./Htmls/mainp.html");
