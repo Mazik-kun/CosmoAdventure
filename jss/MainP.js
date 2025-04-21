@@ -426,8 +426,6 @@ function addVoidSpace() {
     intervalID = setInterval(()=>{document.querySelector(".voidspace").style.cssText = `
         padding:${questionsbox.clientHeight}px 0 0 0;
         width:0% !important;`
-        messages.scrollTop = messages.scrollHeight;
-        console.log(questionsbox.clientHeight)
     }
     ,300)
 }
