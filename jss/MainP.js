@@ -473,11 +473,11 @@ messme();
 function changeloc(a){
     if(a == 0){
         vidos.loop = false;
-        vidos.playbackRate = 2.25
+        vidos.playbackRate = 2.75
         vidos.addEventListener("ended",changecostyl)        
     }else if(a == 1){
         vidos.loop = false;
-        vidos.playbackRate = 2.25
+        vidos.playbackRate = 3.25
         vidos.addEventListener("ended",changecostyl)
     }else if(a == 2){
         changecostyl()
