@@ -304,6 +304,7 @@ function messme() {
         quest();
         document.querySelectorAll(".messtext")[document.querySelectorAll(".messtext").length - 1].onclick = function(){}
     }
+    messages.scrollTop = messages.scrollHeight;
 }
 
 function addMessage(text, clickHandler) {
