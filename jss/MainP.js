@@ -495,6 +495,7 @@ function changecostyl(){
     nowans = answers2
     nowafter = afterquest2
     state = 1
+    vidos.playbackRate = 2.75
     }else if(state == 1){
     vidos.style.cssText = `display:none;`
     img.style.cssText  = `display:block`
