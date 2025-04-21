@@ -94,7 +94,7 @@ const profileData = {
     ],
     statistics: {
         timeSpent: timepassed + `sec`,
-        questionsAsked: askers + `/16`,
+        questionsAsked: askers + `/12`,
         correctAnswers: howmany + `%`,
         learnedContinents: 1
     },
