@@ -48,12 +48,14 @@ putnames()
 function isMobile() {
     return /Mobi|Android/i.test(navigator.userAgent);
 }
-window.onresize = function(){
+window.onresize = checkMobility
+function checkMobility(){
     if (isMobile()) {
-    window.addEventListener("touchstart", positionClick);
-
-} else {
-    window.addEventListener("click", positionClick); 
+        window.addEventListener("touchstart", positionClick);
+    
+    } else {
+        window.addEventListener("click", positionClick); 
+    }
 }
-}
+checkMobility()
 
