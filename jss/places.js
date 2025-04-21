@@ -22,7 +22,7 @@ let currentIndex = 0;
 function positionClick(event) {
     const clientX = event.clientX;
     const startX = event.touches[0]
-    if (clientX < window.innerWidth / 2 || startX < window.innerWidth) {
+    if (clientX < window.innerWidth / 2 || startX < window.innerWidth  // 2) {
         if (currentIndex > 0) {
             currentIndex--;
         }
